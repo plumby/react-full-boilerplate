@@ -2,20 +2,41 @@
 import { combineReducers } from 'redux';
 import types from 'actions/types';
 
-const randomNumbers = (state = [], action) => {
+
+const allNumbers = (state = {}, action) => {
   switch (action.type) {
-    case types.ADD_RANDOM_NUMBER:
-      return [...state,action.number];
+    case types.AWAITING_RANDOM_NUMBER: {
+      const num={[action.id]:null}
+      return Object.assign({},
+        {...state,...num})
+    }
+    case types.ADD_RANDOM_NUMBER: {
+      const num={[action.id]:action.number}
+      return Object.assign({},
+        {...state,...num})
+    }
     default:
       return state;
   }
 };
 
-export const getRandomNumbers = (state) => state.randomNumbers;
+
+// AWAITING_RANDOM_NUMBER
+const randomNumbers = (state = [], action) => {
+  switch (action.type) {
+    case types.AWAITING_RANDOM_NUMBER:
+      return [...state,action.id];
+    default:
+      return state;
+  }
+};
+
+export const getRandomNumbers = (state) =>
+  state.randomNumbers.map((id) => state.allNumbers[id]);
 
 const rootReducer = combineReducers({
   randomNumbers,
-  // routing
+  allNumbers
 });
 
 export default rootReducer;

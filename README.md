@@ -16,6 +16,7 @@ A boilerplate project for React, running on Node
 * webpack
 * webpack-dashboard
 * express
+* uuid
 
 Includes mock API with Promises to test server calls
 
@@ -25,6 +26,8 @@ Includes mock API with Promises to test server calls
 * chai
 * sinon
 * sinon-chai
+* enzyme
+* react-addons-test-utils
 
 # Still need to add
 
