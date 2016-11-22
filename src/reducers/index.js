@@ -34,6 +34,8 @@ const randomNumbers = (state = [], action) => {
 export const getRandomNumbers = (state) =>
   state.randomNumbers.map((id) => state.allNumbers[id]);
 
+export const test = () => 'test'
+
 const rootReducer = combineReducers({
   randomNumbers,
   allNumbers
