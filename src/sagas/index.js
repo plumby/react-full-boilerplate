@@ -5,7 +5,7 @@ import * as api from 'api'
 import types from 'actions/types';
 import * as actions from 'actions'
 
-function* getRandomNumber() {
+export function* getRandomNumber() {
   try {
     const id=uuid.v4();
     yield put(actions.awaitingRandomNumber(id))
