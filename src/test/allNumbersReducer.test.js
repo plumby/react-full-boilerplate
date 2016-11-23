@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import reducers,{test} from 'reducers'
 import {expect} from 'chai'
 import types from 'actions/types';
