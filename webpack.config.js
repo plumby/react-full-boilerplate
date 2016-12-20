@@ -36,6 +36,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.tpl.html',
+      css: [ 'styles.css' ],
       inject: 'body',
       filename: 'index.html'
     }),
@@ -66,7 +67,8 @@ module.exports = {
       },
       { test: /\.json?$/,loader: 'json'},
       { test: /\.css$/, loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'},
-      { test: /\.png$/, loader: 'url?prefix=images/&limit=8000&mimetype=image/png' },
+      { test: /\.2png$/, loader: 'url?prefix=images/&limit=8000&mimetype=image/png' },
+      { test: /\.png$/, loader: "url-loader?limit=100000" },
       { test: /\.jpg$/, loader: 'url?prefix=images/&limit=8000&mimetype=image/jpeg' },
       { test: /\.woff$/, loader: 'url?prefix=fonts/&limit=8000&mimetype=application/font-woff' },
       { test: /\.ttf$/, loader: 'file?prefix=fonts/' },
