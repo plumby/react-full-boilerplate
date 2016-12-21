@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {requestRandomNumber} from 'actions';
 import {getRandomNumbers} from 'reducers';
-import {RandomList} from 'components';
+import {RandomList} from 'components/organisms';
 
 function mapStateToProps(state) {
   const props = {
