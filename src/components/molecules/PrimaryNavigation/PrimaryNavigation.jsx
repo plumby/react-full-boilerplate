@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'components/atoms'
+import { Link } from 'components'
 
 const PrimaryNavigation = (props) => {
   return (

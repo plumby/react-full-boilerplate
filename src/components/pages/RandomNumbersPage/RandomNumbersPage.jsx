@@ -1,5 +1,5 @@
 import React from 'react';
-import {RandomList} from 'containers/pages';
+import {RandomList} from 'containers';
 
 const RandomNumbersPage = () => (<RandomList />)
 
