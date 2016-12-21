@@ -1,6 +1,7 @@
 import React from 'react'
 import { Match } from 'react-router'
-import { Header, HomePage, RandomNumbersPage } from 'components'
+import { HomePage, RandomNumbersPage } from 'components/pages'
+import { Header } from 'components/organisms'
 
 const App = () => {
   return (

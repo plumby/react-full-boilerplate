@@ -1,5 +1,5 @@
 import React from 'react'
-import { PrimaryNavigation } from 'components'
+import { PrimaryNavigation } from 'components/molecules'
 
 import style from './style.css'
 
